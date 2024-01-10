@@ -1,16 +1,43 @@
 ---
+import '@fontsource/fira-mono';
+
+const DESCRIPTION = "Full Stack Web Developer, Software Engineer, and Computer Science Bachelor's Degree holder.";
+const TITLE = "Alan Zam Web Portfolio";
 
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="description" content={DESCRIPTION} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{TITLE}</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="relative text-black dark:text-white">
+		<h1>Titulo</h1>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+		</p>
 	</body>
 </html>
+<style is:global>
+	:root {
+		color-scheme: light;
+		/* color-scheme: light dark; */
+	}
+
+	body {
+		font-family: 'Fira Mono', sans-serif;
+		color: rgba(17, 17, 17, 0.7);
+		display: flex;
+		flex-direction: column;
+  	}
+
+	@media (prefers-color-scheme: dark) {
+    	body {
+			color: rgba(255, 255, 255, 0.7);
+    	}
+  	}
+</style>
